@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
 
+  #TODO:sb Username/password
+  http_basic_authenticate_with name: "a", password: "a", except: [:index, :show]
+
   def index
     @items = Item.all
   end

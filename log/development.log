@@ -848,3 +848,1299 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:40:18 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (10.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 351ms (Views: 271.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/items/3" for 127.0.0.1 at 2017-10-04 17:40:23 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 114ms (Views: 103.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 17:40:24 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (19.5ms)
+  Rendered items/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 243ms (Views: 234.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:40:27 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/7/edit" for 127.0.0.1 at 2017-10-04 17:40:32 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (2.6ms)
+  Rendered items/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 107ms (Views: 101.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/items/7" for 127.0.0.1 at 2017-10-04 17:40:40 -0400
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DAZw0cyjZ8d8I2noHmfYOdp5RzDzeqHgymdYb20Fg79ObRE1tcfnmJXUFTylEQR7lLdgDnoCi4HMZpffT3hvNQ==", "item"=>{"name"=>"Longer Name Item 123"}, "commit"=>"Update Item", "id"=>"7"}
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Longer Name Item 123"], ["updated_at", "2017-10-04 21:40:40.204544"], ["id", 7]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/7
+Completed 302 Found in 69ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/items/7" for 127.0.0.1 at 2017-10-04 17:40:40 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/7" for 127.0.0.1 at 2017-10-04 17:40:56 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 182ms (Views: 159.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:41:01 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 126ms (Views: 120.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/items/7" for 127.0.0.1 at 2017-10-04 17:41:06 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4DFtbuFAjGOPqauVamp7h9Q7nbyJPpnhT+C2EPGpLe0BYmLDrj7+OxRC0wVseJJOLorKCep+eXJaGdP+RewJUQ==", "id"=>"7"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items
+Completed 302 Found in 22ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:41:06 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:43:22 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 144ms (Views: 124.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 17:43:25 -0400
+Processing by ItemsController#new as HTML
+Filter chain halted as #<Proc:0x007fba97bd8c98@/Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 17:43:35 -0400
+Processing by ItemsController#new as HTML
+Filter chain halted as #<Proc:0x007fba94f9c288@/Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 17:43:39 -0400
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (7.9ms)
+  Rendered items/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 171ms (Views: 88.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2017-10-04 17:43:48 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vQbjo34zmAmzTcvSWlcW4F/eQIvbFajiui63i0KrIyxcVewOMU3qUSims0JcRf8ppW8XPrhVSHGv19Jl9u4HkA==", "item"=>{"name"=>"Long Item Name"}, "commit"=>"Create Item"}
+Filter chain halted as #<Proc:0x007fba94f9c288@/Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2017-10-04 17:43:48 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vQbjo34zmAmzTcvSWlcW4F/eQIvbFajiui63i0KrIyxcVewOMU3qUSims0JcRf8ppW8XPrhVSHGv19Jl9u4HkA==", "item"=>{"name"=>"Long Item Name"}, "commit"=>"Create Item"}
+  [1m[35m (3.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Long Item Name"], ["created_at", "2017-10-04 21:43:48.856799"], ["updated_at", "2017-10-04 21:43:48.856799"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/8
+Completed 302 Found in 42ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/items/8" for 127.0.0.1 at 2017-10-04 17:43:48 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:43:50 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/8/edit" for 127.0.0.1 at 2017-10-04 17:43:52 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (6.8ms)
+  Rendered items/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 58ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/items/8" for 127.0.0.1 at 2017-10-04 17:43:54 -0400
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e7b++h+fuuZd2lKv9aUmS9T4A81iMEmDOox+wY/ztBNCj0alLG/1OHOda3CuoKD/DecL/miIK4k+1akMQn9/LA==", "item"=>{"name"=>"Long Item Name 2"}, "commit"=>"Update Item", "id"=>"8"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Long Item Name 2"], ["updated_at", "2017-10-04 21:43:54.133985"], ["id", 8]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/8
+Completed 302 Found in 12ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/items/8" for 127.0.0.1 at 2017-10-04 17:43:54 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/8/edit" for 127.0.0.1 at 2017-10-04 17:43:55 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (7.3ms)
+  Rendered items/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/items/8" for 127.0.0.1 at 2017-10-04 17:43:58 -0400
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCXoWyrF0mPN7gasxWRkVMN2toBir/9vIr9c6WfrQmllHFAEGTWdveOpP3OeYeLgGmm+s2gXnWUm5oskqmeJVg==", "item"=>{"name"=>"Long Item Name"}, "commit"=>"Update Item", "id"=>"8"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Long Item Name"], ["updated_at", "2017-10-04 21:43:58.937151"], ["id", 8]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/8
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/items/8" for 127.0.0.1 at 2017-10-04 17:43:58 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 17:44:00 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 58ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:10:31 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (94.6ms)
+Completed 500 Internal Server Error in 726ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/stephenbryant/repos/item-finder/app/assets/config
+  /Users/stephenbryant/repos/item-finder/app/assets/images
+  /Users/stephenbryant/repos/item-finder/app/assets/javascripts
+  /Users/stephenbryant/repos/item-finder/app/assets/stylesheets
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/stephenbryant/repos/item-finder/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___709520693687450836_70219703832000'
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:10:54 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (23.6ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'materialize-sprockets' with type 'application/javascript'
+Checked in these paths: 
+  /Users/stephenbryant/repos/item-finder/app/assets/config
+  /Users/stephenbryant/repos/item-finder/app/assets/images
+  /Users/stephenbryant/repos/item-finder/app/assets/javascripts
+  /Users/stephenbryant/repos/item-finder/app/assets/stylesheets
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/stephenbryant/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/stephenbryant/repos/item-finder/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___709520693687450836_70219673422360'
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:19:40 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 4628ms (Views: 4580.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:19:51 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 96ms (Views: 71.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:19:53 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 188ms (Views: 181.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 18:19:54 -0400
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (68.1ms)
+  Rendered items/new.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 116ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2017-10-04 18:20:09 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7oZJOlSfREg7hJWAm9tBV+pIGF6RauFSkbqXmp0ZY/CPCWElK26P5MrId4vYBmyRxM1KhWgTB6a6fqes19BO8A==", "item"=>{"name"=>"Test With New UI"}, "commit"=>"Create Item"}
+  [1m[35m (4.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test With New UI"], ["created_at", "2017-10-04 22:20:09.092069"], ["updated_at", "2017-10-04 22:20:09.092069"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/9
+Completed 302 Found in 73ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/items/9" for 127.0.0.1 at 2017-10-04 18:20:09 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 221ms (Views: 216.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:20:11 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 106ms (Views: 98.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:24:00 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 198ms (Views: 180.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2017-10-04 18:24:06 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 66.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/items/2/edit" for 127.0.0.1 at 2017-10-04 18:24:18 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/items/2/edit"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/items/2/edit" for 127.0.0.1 at 2017-10-04 18:26:19 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/items/2/edit"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:26:30 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 178ms (Views: 164.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:26:32 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:26:36 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 92ms (Views: 81.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:26:39 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (4.6ms)
+  Rendered items/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 47ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:26:40 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:26:43 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:26:45 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (4.1ms)
+  Rendered items/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:26:47 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 261ms (Views: 257.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:26:49 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 95ms (Views: 90.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:30:47 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 218ms (Views: 194.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:30:49 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (12.1ms)
+  Rendered items/edit.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 210ms (Views: 203.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:30:51 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:30:53 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 102ms (Views: 99.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:31:54 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/Users/stephenbryant/repos/item-finder/app/views/items/show.html.erb:10: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+( link_to 'Back', items_path :class => "btn waves-effect wav
+                              ^):
+  
+app/views/items/show.html.erb:10: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:32:07 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 192ms (Views: 165.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:32:30 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 119ms (Views: 108.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:33:41 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 207ms (Views: 188.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:34:32 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 200ms (Views: 188.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:34:52 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 168ms (Views: 156.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:35:17 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 158ms (Views: 142.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:36:00 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 241ms (Views: 225.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:36:09 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 103ms (Views: 97.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:36:30 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 178ms (Views: 167.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:37:20 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 199ms (Views: 185.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:38:30 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 282ms (Views: 264.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:39:02 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 206ms (Views: 194.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:40:04 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 222ms (Views: 205.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:41:50 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (67.0ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:3: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+ffer.append=( link_to <i class="material-icons left">cloud</
+                              ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:9: unknown regexp options - th
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:9: unmatched close parenthesis: /i>'New item', new_item_path, :class => "btn waves-effect waves-light" );@output_buffer.safe_append='
+
+<div class="container">
+  <table class="striped, centered">
+    <thead>
+      <tr>
+        <th>Name</
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:10: syntax error, unexpected '<'
+    </tr>
+     ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:11: unknown regexp options - thad
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:15: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:16: unknown regexp options - td
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:17: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+_buffer.append=( link_to 'Edit', edit_item_path(item), :clas
+                              ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:20: unknown regexp options - td
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:21: syntax error, unexpected '<'
+      </tr>
+       ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:23: unknown regexp options - tabl
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:24: syntax error, unexpected '<'
+</div>'.freeze;
+ ^
+/Users/stephenbryant/repos/item-finder/app/views/items/index.html.erb:24: unterminated regexp meets end of file):
+  
+app/views/items/index.html.erb:3: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/items/index.html.erb:9: unknown regexp options - th
+app/views/items/index.html.erb:9: unmatched close parenthesis: /i>'New item', new_item_path, :class => "btn waves-effect waves-light" );@output_buffer.safe_append='
+app/views/items/index.html.erb:10: syntax error, unexpected '<'
+app/views/items/index.html.erb:11: unknown regexp options - thad
+app/views/items/index.html.erb:15: syntax error, unexpected '<'
+app/views/items/index.html.erb:16: unknown regexp options - td
+app/views/items/index.html.erb:17: syntax error, unexpected '<'
+app/views/items/index.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/items/index.html.erb:20: unknown regexp options - td
+app/views/items/index.html.erb:21: syntax error, unexpected '<'
+app/views/items/index.html.erb:23: unknown regexp options - tabl
+app/views/items/index.html.erb:24: syntax error, unexpected '<'
+app/views/items/index.html.erb:24: unterminated regexp meets end of file
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:42:20 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 202ms (Views: 184.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:42:48 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 195ms (Views: 176.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:42:51 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 106ms (Views: 103.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:43:55 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 233ms (Views: 220.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:44:18 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 175ms (Views: 172.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:44:35 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 100ms (Views: 96.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:45:35 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 209ms (Views: 196.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:46:00 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 170ms (Views: 158.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:46:19 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 181ms (Views: 170.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:46:35 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 184ms (Views: 170.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:47:51 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 316ms (Views: 302.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:48:01 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 133ms (Views: 124.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:48:11 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (7.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 191ms (Views: 157.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:48:14 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 91ms (Views: 85.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:48:39 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 173ms (Views: 153.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:49:30 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 206ms (Views: 187.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:49:31 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (28.2ms)
+  Rendered items/edit.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 117ms (Views: 101.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/items/1" for 127.0.0.1 at 2017-10-04 18:49:37 -0400
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+mEnzGbcQb3T2VNl7CL0+n8zGR2EA+vogZBWylhlBIi8vArLe5V0ClgsdmtZYKUEdvf6/1ddPmoCL/u60lyBA==", "item"=>{"name"=>"First edit"}, "commit"=>"Update Item", "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "First edit"], ["updated_at", "2017-10-04 22:49:37.834185"], ["id", 1]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 76ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:49:37 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:49:39 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 64ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:49:51 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 153ms (Views: 138.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:04 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 187ms (Views: 175.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2017-10-04 18:50:08 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 122ms (Views: 114.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:10 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 116ms (Views: 111.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:50:11 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (8.0ms)
+  Rendered items/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 76ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:13 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 113ms (Views: 107.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:50:14 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 111ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:50:31 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 284ms (Views: 265.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:50:35 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (8.9ms)
+  Rendered items/edit.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 155ms (Views: 131.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:36 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 117ms (Views: 110.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:50:38 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:40 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/5/edit" for 127.0.0.1 at 2017-10-04 18:50:50 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (3.5ms)
+  Rendered items/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 63ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:50:52 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 95ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/3" for 127.0.0.1 at 2017-10-04 18:50:53 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 76ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/3" for 127.0.0.1 at 2017-10-04 18:51:27 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 201ms (Views: 181.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 18:51:30 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (7.2ms)
+  Rendered items/edit.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/stephenbryant/repos/item-finder/app/views/items/_form.html.erb:26: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+ppend=( form.submit, :class => "btn waves-effect waves-light
+                              ^):
+  
+app/views/items/_form.html.erb:26: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/items/edit.html.erb:4:in `_app_views_items_edit_html_erb__3665766790853001160_70307636345220'
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 18:51:49 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (32.5ms)
+  Rendered items/edit.html.erb within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/stephenbryant/repos/item-finder/app/views/items/_form.html.erb:26: syntax error, unexpected ',', expecting '='
+_buffer.append=( form.submit,, :class => "btn waves-effect w
+                              ^):
+  
+app/views/items/_form.html.erb:26: syntax error, unexpected ',', expecting '='
+app/views/items/edit.html.erb:4:in `_app_views_items_edit_html_erb__3665766790853001160_70307658182860'
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 18:52:59 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (18.9ms)
+  Rendered items/edit.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 260ms (Views: 228.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 18:53:40 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (12.6ms)
+  Rendered items/edit.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 191ms (Views: 173.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/3/edit" for 127.0.0.1 at 2017-10-04 18:54:07 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (8.4ms)
+  Rendered items/edit.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:54:26 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 144ms (Views: 137.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:54:27 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:54:54 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 114ms (Views: 105.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:55:05 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:55:09 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 108ms (Views: 101.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:55:11 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:55:13 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (32.2ms)
+  Rendered items/edit.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 200ms (Views: 176.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:55:14 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 18:55:16 -0400
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (7.7ms)
+  Rendered items/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:55:18 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:28 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 2933ms (Views: 2915.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:56:34 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:35 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/1/edit" for 127.0.0.1 at 2017-10-04 18:56:37 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (3.5ms)
+  Rendered items/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:38 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 84ms (Views: 80.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/4/edit" for 127.0.0.1 at 2017-10-04 18:56:42 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (6.6ms)
+  Rendered items/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 198ms (Views: 194.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:44 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 163ms (Views: 158.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2017-10-04 18:56:48 -0400
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (5.4ms)
+  Rendered items/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 82ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2017-10-04 18:56:49 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUp5tV3XMxC9//MujCXLhmqgyKJWd7U+/U7SSw7uBqBcxVGqIib4vEyzESXP+OZARCWaea8OU8rWiuJ9RCcroA==", "item"=>{"name"=>""}, "commit"=>"Create Item"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (36.2ms)
+  Rendered items/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 170ms (Views: 148.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:56 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 84ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2017-10-04 18:56:57 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 75ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2017-10-04 18:56:59 -0400
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2017-10-04 18:57:00 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.2ms)
+
+

@@ -1,11 +1,17 @@
+<div class="container">
+	<h1>View Item</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
- 
- <!-- TODO:sb Associations -->
+	<p>
+	  <strong>Name:</strong>
+	  <%= @item.name %>
+	</p>
+	 
+	 <!-- TODO:sb Associations -->
 
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+	<p>
+		<%= link_to 'Edit', edit_item_path(@item), :class => "btn waves-effect waves-light" %>
+	</p>
+	<p>
+		<%= link_to 'Back', items_path, :class => "btn waves-effect waves-light" %>
+	</p>
+</div>

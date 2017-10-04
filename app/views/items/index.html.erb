@@ -1,20 +1,23 @@
-<h1>Listing Items</h1>
- 
-<%= link_to 'New item', new_item_path %>
+<div class="container">
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
- 
-  <% @items.each do |item| %>
-    <tr>
-      <td><%= item.name %></td>
-      <td><%= link_to 'Show', item_path(item) %></td>
-      <td><%= link_to 'Edit', edit_item_path(item) %></td>
-      <td><%= link_to 'Destroy', item_path(item),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+  <h1>Listing Items &emsp; <%= link_to '+ New item', new_item_path, :class => "btn waves-effect waves-light" %> </h1>
+
+  <table class="striped centered">
+    <thead>
+      <tr>
+        <th>Name</th>
     </tr>
-  <% end %>
-</table>
+  </thead>
+   
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= link_to 'Show', item_path(item), :class => "btn waves-effect waves-light" %></td>
+        <td><%= link_to 'Edit', edit_item_path(item), :class => "btn waves-effect waves-light" %></td>
+        <td><%= link_to 'Destroy', item_path(item),
+                method: :delete,
+                data: { confirm: 'Are you sure?' }, :class => "btn waves-effect waves-light" %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
