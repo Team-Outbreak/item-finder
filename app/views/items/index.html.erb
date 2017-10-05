@@ -6,9 +6,9 @@
     <thead>
       <tr>
         <th>Name</th>
-    </tr>
-  </thead>
-   
+      </tr>
+    </thead>
+
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
@@ -20,4 +20,9 @@
       </tr>
     <% end %>
   </table>
+  <br>
+  <br>
+  <p>
+    <%= link_to 'Back', welcome_index_path, :class => "btn waves-effect waves-light" %>
+  </p>
 </div>
