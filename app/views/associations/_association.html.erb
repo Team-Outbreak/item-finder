@@ -1,0 +1,16 @@
+<p>
+  <strong>Name:</strong>
+  <%= association.name %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= association.ranking %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Association', [association.item, association],
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, :class => "btn waves-effect waves-light" %>
+</p>
+<hr>

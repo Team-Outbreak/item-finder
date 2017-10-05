@@ -1,0 +1,15 @@
+<%= form_with(model: [ @item, @item.associations.build ], local: true) do |form| %>
+    <!--TODO:sb Char length-->
+    <div class="input-field">
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+    <!--TODO:sb Restrict from 0-100-->
+    <div class="input-field">
+      <%= form.label :ranking %><br>
+      <%= form.number_field :ranking %>
+    </div>
+    <p>
+      <%= form.submit :class => "btn waves-effect waves-light" %>
+    </p>
+<% end %>
