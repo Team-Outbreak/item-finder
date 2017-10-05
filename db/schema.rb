@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20171005112623) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "associations", force: :cascade do |t|
     t.string "name"
     t.integer "ranking"
-    t.integer "item_id"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_associations_on_item_id"
@@ -27,4 +30,5 @@ ActiveRecord::Schema.define(version: 20171005112623) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "associations", "items"
 end

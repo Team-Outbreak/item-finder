@@ -1,25 +1,27 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
+# Ensure the Postgresql gem is defined in the Gemfile
+#   gem 'pg'
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: db/item_finder_development
+  username: admin
+  password: test
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/item_finder_test
+  username: admin
+  password: test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/item_finder_production
+  username: admin
+  password: test
