@@ -1,3 +1,23 @@
-<h1>Item Finder</h1>
+<div class="container">
+  <h1>Item Finder</h1>
 
-<%= link_to 'Items', controller: 'items' %>
+  <div class="row">
+    <form class="col s12">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">search</i>
+        <input id="search" type="search">
+        <label for="search">What Item Are You Looking For?</label>
+      </div>
+    </form>
+  </div>
+
+  <!--TODO:sb-->
+  The search bar currently does nothing
+  <br>
+  <br>
+
+  <br>
+  <p>
+    <%= link_to 'View All Items', {controller: 'items'}, {:class => "btn waves-effect waves-light"} %>
+  </p>
+</div>
