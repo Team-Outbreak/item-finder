@@ -52,3 +52,6 @@ build-iPhoneSimulator/
 # IDE
 .idea
 log/development.log
+
+# Configurations
+/config/local_env.yml

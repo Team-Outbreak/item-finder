@@ -1,0 +1,16 @@
+# Duplicate this file and rename the new version to local_env.yml
+# Ensure that the new version is included in .gitignore
+# Add account settings and API keys here in the new version
+# Do not add sensitive information to the .sample version
+
+# Product Credentials
+SYSADMIN_USERNAME: ''
+SYSADMIN_PASSWORD: ''
+
+# Database Credentials
+POSTGRES_DEV_USERNAME: ''
+POSTGRES_DEV_PASSWORD: ''
+POSTGRES_USERNAME: ''
+POSTGRES_PASSWORD: ''
+
+# ** NOTE: Any changes made to this file should also be made to the Heroku server

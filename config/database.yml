@@ -8,8 +8,8 @@ default: &default
 development:
   <<: *default
   database: db/item_finder_development
-  username: admin
-  password: test
+  username: <%= ENV['POSTGRES_DEV_USERNAME'] %>
+  password: <%= ENV['POSTGRES_DEV_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   database: db/item_finder_production
-  username: admin
-  password: test
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
