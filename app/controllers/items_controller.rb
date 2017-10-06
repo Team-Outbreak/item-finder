@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
 
-  #TODO:sb Username/password
   http_basic_authenticate_with name: ENV['SYSADMIN_USERNAME'], password: ENV['SYSADMIN_PASSWORD'], except: [:index, :show]
 
   def index

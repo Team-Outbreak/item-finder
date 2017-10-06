@@ -3,21 +3,34 @@
 
   <div class="row">
     <form class="col s12">
-      <div class="input-field col m6 s12">
+      <div class="input-field col m10 s12">
         <i class="material-icons prefix">search</i>
-        <input id="search" type="search">
-        <label for="search">What Item Are You Looking For?</label>
+        <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search]%>
+            <%= submit_tag "Search", :name => nil, :style => "display: none;"%>
+        <% end %>
+        <label for="search">What item are you looking for?</label>
       </div>
     </form>
   </div>
 
-  <!--TODO:sb-->
-  The search bar currently does nothing
-  <br>
-  <br>
+  <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
+      <h5><%= @item.name.capitalize %> can be found near:</h5>
 
-  <br>
-  <p>
-    <%= link_to 'View All Items', items_path, {:class => "btn waves-effect waves-light"} %>
-  </p>
+      <table>
+        <thead><tr>
+          <th>Item Name</th>
+          <th>Likelihood</th>
+        </tr></thead>
+
+        <tbody>
+        <!--TODO:sb The font size of the results should increase based on ranking. I.e. A ranking of '100' should be very large-->
+        <%= render partial: "association", collection: @item.associations.limit(10).order("ranking desc") %>
+        </tbody>
+      </table>
+  <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
+      <h5><%= @item.name.capitalize %> doesn't have any associated items yet.</h5>
+  <% elsif !params[:search].blank? && @item.nil? %>
+      <h4>No matching items were found.</h4>
+  <% end %>
 </div>
