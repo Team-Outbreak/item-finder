@@ -1,13 +1,11 @@
 <%= form_with(model: [ @item, @item.associations.build ], local: true) do |form| %>
-    <!--TODO:sb Char length-->
     <div class="input-field">
       <%= form.label :name %><br>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, :maxlength => 15 , :minlength => 3 %>
     </div>
-    <!--TODO:sb Restrict from 0-100-->
     <div class="input-field">
       <%= form.label :ranking %><br>
-      <%= form.number_field :ranking %>
+      <%= form.number_field :ranking, :min => 0, :max => 100 %>
     </div>
     <p>
       <%= form.submit :class => "btn waves-effect waves-light" %>

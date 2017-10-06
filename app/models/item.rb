@@ -1,7 +1,6 @@
 class Item < ApplicationRecord
   has_many :associations, dependent: :destroy
-  validates :name, presence: true,
-                    length: { minimum: 5 }
+  validates :name, presence: true, length: { minimum: 3 }
 
   def self.search(query)
     # Find and return the first matching item.

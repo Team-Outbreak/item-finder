@@ -1,4 +1,5 @@
 class Association < ApplicationRecord
   belongs_to :item
-#   TODO:sb Validation
+  validates :name, presence: true, length: { minimum: 3 }
+  validates :ranking, presence: true, :inclusion => 0...100
 end
