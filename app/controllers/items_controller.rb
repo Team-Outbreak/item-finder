@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  http_basic_authenticate_with name: ENV['SYSADMIN_USERNAME'], password: ENV['SYSADMIN_PASSWORD'], except: [:index, :show]
+  http_basic_authenticate_with name: ENV['SYSADMIN_USERNAME'], password: ENV['SYSADMIN_PASSWORD']
 
   def index
     @items = Item.all

@@ -1,4 +1,7 @@
 class AssociationsController < ApplicationController
+
+  http_basic_authenticate_with name: ENV['SYSADMIN_USERNAME'], password: ENV['SYSADMIN_PASSWORD']
+
   def create
     @item = Item.find(params[:item_id])
     @association = @item.associations.create(association_params)
