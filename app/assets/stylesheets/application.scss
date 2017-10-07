@@ -1,6 +1,27 @@
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("teal", "lighten-2") !default;
+$primary-color: color("green", "accent-1") !default;
+$secondary-color: color("teal", "base") !default;
+
+// Override the input disabled color to be less dark
+$input-border-color: color("teal", "darken-3");
+.prefix {
+  color: $input-border-color;
+}
+
+// Override the footer font color to be readable
+$footer-copyright-font-color: rgba(0,0,0,255);
+
+
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "responsive-table";
+
+// Force the footer to be stuck on the bottom
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
