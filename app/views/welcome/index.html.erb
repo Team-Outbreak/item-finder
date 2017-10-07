@@ -27,7 +27,6 @@
 
           <table>
             <tbody>
-            <!--TODO:sb The font size of the results should increase based on ranking. I.e. A ranking of '100' should be very large-->
             <%= render partial: "association", collection: @item.associations.limit(10).order("ranking desc") %>
             </tbody>
           </table>
