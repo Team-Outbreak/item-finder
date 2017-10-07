@@ -5,12 +5,12 @@
   <br>
   <br>
 
-  <div class="row" style="margin-bottom: 10px">
+  <div class="row" style="margin-bottom: 5px">
     <form class="col s12">
       <div class="input-field col m10 s12">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], autofocus: true, onfocus: "this.select();" %>
+            <%= text_field_tag :search, params[:search], autofocus: true, onfocus: "this.select();", style: "margin-bottom: 10px" %>
         <% end %>
         <label for="search">What item are you looking for?</label>
       </div>
@@ -19,31 +19,28 @@
 
   <!--TODO:sb Transition in and out -->
   <div class="row">
-    <div class="col m10 s12">
+    <div class="col m10 s12 center">
       <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
-          <h5><%= @item.name.capitalize %> can be found near:</h5>
+          <div class="flow-text">
+            <i><%= @item.name.capitalize %> can be found near:</i>
+          </div>
 
           <table>
-            <thead><tr>
-              <th>Item Name</th>
-              <th>Likelihood</th>
-            </tr></thead>
-
             <tbody>
             <!--TODO:sb The font size of the results should increase based on ranking. I.e. A ranking of '100' should be very large-->
             <%= render partial: "association", collection: @item.associations.limit(10).order("ranking desc") %>
             </tbody>
           </table>
       <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
-          <div class="flow-text center">
-            We're not yet sure what you can find around '<%= @item.name.capitalize %>'.
+          <div class="flow-text">
+            We're still figuring out how to help you find '<%= @item.name.capitalize %>'.
           </div>
       <% elsif !params[:search].blank? && @item.nil? %>
-          <div class="flow-text center">
+          <div class="flow-text">
             No matching items were found.
           </div>
       <% else %>
-          <div class="flow-text center">
+          <div class="flow-text">
             Try:
             <span style="font-size: 1.1rem">
               <i>Quinoa, Lentils, Tape Measures, Tangerines, Shovels, Barley, Pesto, SauerKraut</i>
