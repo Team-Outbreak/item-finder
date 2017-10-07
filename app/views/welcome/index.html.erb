@@ -17,7 +17,6 @@
     </form>
   </div>
 
-  <!--TODO:sb Transition in and out -->
   <div class="row">
     <div class="col m10 s12 center">
       <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
@@ -27,7 +26,7 @@
 
           <table>
             <tbody>
-            <%= render partial: "association", collection: @item.associations.limit(10).order("ranking desc") %>
+              <%= render partial: 'association', collection: @item.associations.limit(10).order("ranking desc") %>
             </tbody>
           </table>
       <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>

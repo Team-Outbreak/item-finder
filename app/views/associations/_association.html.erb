@@ -1,16 +1,7 @@
-<p>
-  <strong>Name:</strong>
-  <%= association.name %>
-</p>
-
-<p>
-  <strong>Ranking:</strong>
-  <%= association.ranking %>
-</p>
-
-<p>
-  <%= link_to 'Remove Association', [association.item, association],
-              method: :delete,
-              data: { confirm: 'Are you sure?' }, :class => "btn waves-effect waves-light" %>
-</p>
-<hr>
+<tr>
+  <td class="center-align"> <%= association.name %></td>
+  <td class="left-align">(<%= association.ranking %>%)</td>
+  <td class="left-align">  <%= link_to 'Remove Association', [association.item, association],
+                                       method: :delete, data: { confirm: 'Are you sure?' },
+                                       :class => "btn waves-effect waves-light" %></td>
+</tr>
