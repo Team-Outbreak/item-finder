@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ItemFinder</title>
+    <title>Item Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <main>
+    <body class="<%= @background_color %>">
+      <%= yield %>
+    </body>
+  </main>
+
+  <!-- Hide the footer on System Admin pages -->
+  <% if controller_name == "welcome" %>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          Item Finder
+          <div class="right">
+            <!--TODO:sb Link this to a new page that explains the product, with examples.-->
+            <a class="teal-text" href="#!">More Info</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <% end %>
 </html>

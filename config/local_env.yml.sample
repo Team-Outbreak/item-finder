@@ -13,4 +13,7 @@ POSTGRES_DEV_PASSWORD: ''
 POSTGRES_USERNAME: ''
 POSTGRES_PASSWORD: ''
 
+# Keys for Cookie validation in production build
+SECRET_KEY_BASE: ''
+
 # ** NOTE: Any changes made to this file should also be made to the Heroku server

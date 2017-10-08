@@ -2,27 +2,31 @@
 
   <h1>Listing Items &emsp; <%= link_to '+ New item', new_item_path, :class => "btn waves-effect waves-light" %> </h1>
 
-  <table class="striped centered">
-    <thead>
-      <tr>
-        <th>Name</th>
-      </tr>
-    </thead>
 
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= link_to 'Show', item_path(item), :class => "btn waves-effect waves-light" %></td>
-        <td><%= link_to 'Edit', edit_item_path(item), :class => "btn waves-effect waves-light" %></td>
-        <td><%= link_to 'Destroy', item_path(item),
-                method: :delete,
-                data: { confirm: 'Are you sure?' }, :class => "btn waves-effect waves-light" %></td>
-      </tr>
-    <% end %>
-  </table>
+  <div class="responsive-table">
+    <div class="table-header">
+      <div class="table-cell">Name</div>
+      <div class="table-cell empty"></div>
+      <div class="table-cell empty"></div>
+      <div class="table-cell empty"></div>
+    </div>
+
+    <div class="table-body">
+      <% @items.each do |item| %>
+        <div class="table-row">
+          <div class="table-cell"><%= item.name %></div>
+          <div class="table-cell"><%= link_to 'Show', item_path(item), :class => "btn waves-effect waves-light" %></div>
+          <div class="table-cell"><%= link_to 'Edit', edit_item_path(item), :class => "btn waves-effect waves-light" %></div>
+          <div class="table-cell"><%= link_to 'Delete', item_path(item),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' }, :class => "btn waves-effect waves-light" %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
   <br>
   <br>
   <p>
-    <%= link_to 'Back', welcome_index_path, :class => "btn waves-effect waves-light" %>
+    <%= link_to 'Home Page', welcome_index_path, :class => "btn waves-effect waves-light" %>
   </p>
 </div>

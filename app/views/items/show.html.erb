@@ -1,28 +1,43 @@
 <div class="container">
 	<h1>View Item</h1>
 
-	<p>
+	<p class="flow-text">
 	  <strong>Name:</strong>
 	  <%= @item.name %>
+    &nbsp;
+    &nbsp;
+    <%= link_to 'Edit', edit_item_path(@item), :class => "btn waves-effect waves-light" %>
 	</p>
 
-  <!--TODO:sb Display in some sort of table, ordered by rank-->
-  <h4>Associations</h4>
-  <%= render @item.associations %>
-
-  <br>
   <br>
 
   <div class="row">
-    <div class="col s4">
+    <div class="col l5 m6 s12">
       <h4>Add Association:</h4>
       <%= render 'associations/form' %>
     </div>
   </div>
 
   <br>
+  <br>
+
+  <h4>Associations</h4>
+
+  <table class="centered highlight">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ranking</th>
+      <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render partial: 'associations/association', collection: @item.associations.order("ranking desc") %>
+    </tbody>
+  </table>
+
+  <br>
 	<p>
-		<%= link_to 'Edit', edit_item_path(@item), :class => "btn waves-effect waves-light" %>
 		<%= link_to 'Back', items_path, :class => "btn waves-effect waves-light" %>
 	</p>
 </div>

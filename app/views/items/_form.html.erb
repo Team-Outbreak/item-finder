@@ -1,5 +1,4 @@
-<!-- TODO:sb Remove local: true -->
-<%= form_with model: @item, local: true do |form| %>
+<%= form_with model: @item do |form| %>
 
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -17,11 +16,9 @@
 
   <div class="input-field">
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :maxlength => 15 , :minlength => 3 %>
   </div>
- 
- <!-- TODO:sb Add associations -->
- 
+
   <p>
     <%= form.submit :class => "btn waves-effect waves-light" %>
   </p>
