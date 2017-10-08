@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
     expires_in 2.hours, :public => true
 
     @item = nil
-    if params[:search]
+    if params[:search] && params[:search].length >= 3
       @item = Item.search(params[:search])
     end
   end

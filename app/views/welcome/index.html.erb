@@ -6,7 +6,7 @@
   <br>
 
   <div class="row" style="margin-bottom: 5px">
-    <form class="col s12">
+    <form class="col s12" autocomplete="off">
       <div class="input-field col m10 s12">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
@@ -36,6 +36,11 @@
       <% elsif !params[:search].blank? && @item.nil? %>
           <div class="flow-text">
             No matching items were found.
+            <% if params[:search].length < 3 %>
+                <div>
+                  Try adding more letters to your search term.
+                </div>
+            <% end %>
           </div>
       <% else %>
           <div class="flow-text">
