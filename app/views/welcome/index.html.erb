@@ -7,7 +7,7 @@
 
   <div class="row">
     <form class="col s12" autocomplete="off" style="margin-bottom: 5px;">
-      <div class="input-field col l6 m8 s12 offset-l2 offset-m1">
+      <div class="input-field col m8 s12 offset-m2">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], autofocus: true, onfocus: "this.select();", style: "margin-bottom: 10px" %>
@@ -16,7 +16,7 @@
       </div>
     </form>
 
-    <div class="col l6 m8 s12 offset-l2 offset-m1 center">
+    <div class="col m8 s12 offset-m2 center">
       <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
           <div class="flow-text">
             <i><%= @item.name.capitalize %> can be found near:</i>
