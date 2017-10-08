@@ -32,3 +32,9 @@ main {
   transform: scale(1.2);
   font-weight:bold;
 }
+
+// Prevent the search field from highlighting when the user selects it
+body, textarea:focus, input:focus{
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}

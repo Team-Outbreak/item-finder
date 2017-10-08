@@ -10,7 +10,7 @@
       <div class="input-field col m8 s12 offset-m2">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], autofocus: params[:search].blank? ? true : false, style: "margin-bottom: 10px; -webkit-tap-highlight-color: transparent;" %>
+            <%= text_field_tag :search, params[:search], autofocus: params[:search].blank? ? true : false, style: "margin-bottom: 10px;" %>
         <% end %>
         <label for="search">What item are you looking for?</label>
       </div>
@@ -44,7 +44,7 @@
           <div class="flow-text">
             Try:
             <span style="font-size: 1.1rem">
-              <i>Quinoa, Lentils, Tape Measures, Tangerines, Shovels, Barley, Pesto, SauerKraut</i>
+              <i>Quinoa, Lentils, Tape Measures, Tangerines, Shovels, Barley, Pesto, Sauerkraut</i>
             </span>
           </div>
       <% end %>
