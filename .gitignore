@@ -51,7 +51,10 @@ build-iPhoneSimulator/
 
 # IDE
 .idea
-log/development.log
+log/*
 
 # Configurations
 /config/local_env.yml
+
+# Ignore any generated assets for Production testing
+/public/assets/*
