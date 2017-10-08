@@ -34,7 +34,7 @@ main {
 }
 
 // Prevent the search field from highlighting when the user selects it
-body, textarea:focus, input:focus{
+.input-field{
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
