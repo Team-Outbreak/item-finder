@@ -1,13 +1,13 @@
 <!-- application.html.erb will set this to the body's background color -->
-<% @background_color="green accent-1" %>
+<% @background_color="grey lighten-4" %>
 
 <div class="container">
   <br>
   <br>
 
-  <div class="row" style="margin-bottom: 5px">
-    <form class="col s12" autocomplete="off">
-      <div class="input-field col m10 s12">
+  <div class="row">
+    <form class="col s12" autocomplete="off" style="margin-bottom: 5px;">
+      <div class="input-field col l6 m8 s12 offset-l2 offset-m1">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], autofocus: true, onfocus: "this.select();", style: "margin-bottom: 10px" %>
@@ -15,10 +15,8 @@
         <label for="search">What item are you looking for?</label>
       </div>
     </form>
-  </div>
 
-  <div class="row">
-    <div class="col m10 s12 center">
+    <div class="col l6 m8 s12 offset-l2 offset-m1 center">
       <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
           <div class="flow-text">
             <i><%= @item.name.capitalize %> can be found near:</i>
