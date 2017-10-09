@@ -10,7 +10,7 @@
       <div class="input-field col m8 s12 offset-m2">
         <i class="material-icons prefix">search</i>
         <%= form_tag(welcome_index_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], autofocus: params[:search].blank? ? true : false, style: "margin-bottom: 10px;" %>
+            <%= text_field_tag :search, params[:search], autofocus: params[:search].blank? && !(request.user_agent =~ /Mobile|webOS/) ? true : false, style: "margin-bottom: 10px;" %>
         <% end %>
         <label for="search">What item are you looking for?</label>
       </div>
