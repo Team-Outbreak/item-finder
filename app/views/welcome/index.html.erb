@@ -17,44 +17,7 @@
       </div>
     </form>
 
-    <div class="col m8 s12 offset-m2 center">
-      <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
-          <div class="flow-text">
-            <i><%= @item.name.capitalize %> can be found near:</i>
-          </div>
+    <%= render partial: 'search_results' %>
 
-          <table>
-            <tbody>
-              <%= render partial: 'association', collection: @item.associations.limit(10).order("ranking desc") %>
-            </tbody>
-          </table>
-      <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
-          <div class="flow-text">
-            We're still figuring out how to help you find '<%= @item.name.capitalize %>'.
-          </div>
-      <% elsif !params[:search].blank? && @item.nil? %>
-          <div class="flow-text">
-            No matching items were found.
-            <% if params[:search].length < 3 %>
-                <div>
-                  Try adding more letters to your search term.
-                </div>
-            <% end %>
-            <br>
-            <br>
-            <%= link_to 'Add New Item', 'https://goo.gl/forms/QsZGMRvXgFmKIGWu2', target: '_blank', style: "margin-bottom: 3px;", :class => "btn waves-effect waves-light" %>
-            <div style="font-size: .8rem">
-              (Opens New Tab)
-            </div>
-          </div>
-      <% else %>
-          <div class="flow-text">
-            Try:
-            <span style="font-size: 1.1rem">
-              <i>Quinoa, Lentils, Oranges, Bread crumbs, Yeast, Barley, Bulgar, Oregano</i>
-            </span>
-          </div>
-      <% end %>
-    </div>
   </div>
 </div>

@@ -1,0 +1,37 @@
+
+<div class="col m8 s12 offset-m2 center">
+  <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
+      <div class="flow-text">
+        <i><%= @item.name.capitalize %> can be found near:</i>
+      </div>
+
+      <table>
+        <tbody>
+        <%= render partial: 'association', collection: @item.associations.limit(10).order("ranking desc") %>
+        </tbody>
+      </table>
+  <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
+      <div class="flow-text">
+        We're still figuring out how to help you find '<%= @item.name.capitalize %>'.
+      </div>
+  <% elsif !params[:search].blank? && @item.nil? %>
+      <div class="flow-text">
+        No matching items were found.
+        <% if params[:search].length < 3 %>
+            <div>
+              Try adding more letters to your search term.
+            </div>
+        <% end %>
+        <br>
+        <br>
+        <%= link_to 'Suggest New Item', welcome_suggestion_form_path, :class => "btn waves-effect waves-light" %>
+      </div>
+  <% else %>
+      <div class="flow-text">
+        Try:
+        <span style="font-size: 1.1rem">
+              <i>Quinoa, Lentils, Oranges, Bread crumbs, Yeast, Barley, Bulgar, Oregano</i>
+            </span>
+      </div>
+  <% end %>
+</div>
