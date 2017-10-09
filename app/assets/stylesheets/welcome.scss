@@ -1,3 +1,12 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.clear-input {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  // Default to hidden
+  display: none;
+}
