@@ -1,12 +1,21 @@
-<tr>
+<div class="association-result">
+  <div class="vote-column right-align">
+    <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
+       class="material-icons prefix down-vote">thumb_down</i>
+  </div>
   <!--
   Equation to keep Font Size between bounds.
   NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
 
   Note that the 'oldValues' and 'oldMax'/'oldMin' consider only a tenth of the association counter (plus 1 to get positive numbers).
    -->
-  <td class="center-align association-result" style="<%= 'font-size: ' + (((((1.9 / ((association_counter*0.1)+1.0)) - 1.0) * 1.0) / 0.9) + 1.0).to_s + 'rem' %>"> <%= association.name.capitalize %></td>
+  <div class="center-align" style="<%= 'font-size: ' + (((((1.9 / ((association_counter*0.1)+1.0)) - 1.0) * 1.0) / 0.9) + 1.0).to_s + 'rem' %>"> <%= association.name.capitalize %></div>
+
+  <div class="vote-column left-align">
+    <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
+       class="material-icons prefix up-vote">thumb_up</i>
+  </div>
 
   <!--TODO:sb Re-enable rankings when user-voting is implemented-->
   <!--<td class="left-align">(<%= association.ranking %>%)</td>-->
-</tr>
+</div>

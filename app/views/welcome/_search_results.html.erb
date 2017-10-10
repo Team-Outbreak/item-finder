@@ -5,11 +5,9 @@
         <i><%= @item.name.capitalize %> can be found near:</i>
       </div>
 
-      <table>
-        <tbody>
+      <div>
         <%= render partial: 'association', collection: @item.associations.limit(10).order("ranking desc") %>
-        </tbody>
-      </table>
+      </div>
   <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
       <div class="flow-text">
         We're still figuring out how to help you find '<%= @item.name.capitalize %>'.

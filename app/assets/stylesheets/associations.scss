@@ -1,3 +1,46 @@
 // Place all the styles related to the Associations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.association-result {
+  padding: 15px 5px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    font-weight: bold;
+
+    .vote-column {
+      visibility: visible;
+    }
+  }
+
+  .vote-column {
+    visibility: hidden;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    &.right-align {
+      justify-content: flex-end;
+    }
+
+    i {
+      cursor: pointer;
+
+      //After clicked
+      &.active {
+        visibility: visible;
+        cursor: default;
+      }
+
+      //After opposite button is clicked
+      &.inactive {
+        visibility: hidden;
+      }
+    }
+  }
+}

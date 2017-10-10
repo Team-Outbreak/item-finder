@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'welcome/feedback_form'
 
   resources :items do
-    resources :associations
+    resources :associations do
+      post 'increase_ranking'
+      post 'decrease_ranking'
+    end
   end
 
   root 'welcome#index'
