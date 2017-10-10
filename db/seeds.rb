@@ -842,4 +842,4 @@ Association.create!([{name: 'Salmon', ranking: 50, item: new_item}, {name: 'Crab
 new_item = Item.create(name: 'Tuna')
 Association.create!([{name: 'Salmon', ranking: 50, item: new_item}, {name: 'Catfish', ranking: 50, item: new_item}])
 new_item = Item.create(name: 'Quinoa')
-Association.create!([{name: 'Rice', ranking: 100, item: new_item}, {name: 'Grains', ranking: 90, item: new_item}, {name: 'Beans', ranking: 80, item: new_item}, {name: 'Flour', ranking: 75, item: new_item}, {name: 'Organize items', ranking: 60, item: new_item}, {name: 'Barley', ranking: 55, item: new_item}])
+Association.create!([{name: 'Rice', ranking: 100, item: new_item}, {name: 'Grains', ranking: 90, item: new_item}, {name: 'Beans', ranking: 80, item: new_item}, {name: 'Flour', ranking: 75, item: new_item}, {name: 'Organic food', ranking: 60, item: new_item}, {name: 'Barley', ranking: 55, item: new_item}])
