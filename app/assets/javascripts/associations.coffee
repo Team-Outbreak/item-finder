@@ -32,6 +32,21 @@ $ ->
     oppositeButton.addClass("inactive")
     oppositeButton.removeClass("active")
 
+  associationClickEvent = (e) ->
+    targetElement = $(this);
+    associationName = String(targetElement.data("association-name"))
+
+    $.ajax(
+      url: "/welcome/search_related_image",
+      data: {
+        association_name: associationName
+      },
+      type: 'POST',
+      beforeSend: $.rails.CSRFProtection
+    )
 
   voteButtons = $('.vote-column i')
   voteButtons.click voteClickEvent
+
+  association = $('.association-result')
+  association.click associationClickEvent

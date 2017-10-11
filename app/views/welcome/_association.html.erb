@@ -1,4 +1,4 @@
-<div class="association-result">
+<div class="association-result" data-association-name="<%= association.name %>">
   <div class="vote-column right-align">
     <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
        class="material-icons prefix down-vote">thumb_down</i>
@@ -15,7 +15,4 @@
     <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
        class="material-icons prefix up-vote">thumb_up</i>
   </div>
-
-  <!--TODO:sb Re-enable rankings when user-voting is implemented-->
-  <!--<td class="left-align">(<%= association.ranking %>%)</td>-->
 </div>

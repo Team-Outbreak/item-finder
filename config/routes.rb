@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/more_info'
   get 'welcome/suggestion_form'
   get 'welcome/feedback_form'
+  post 'welcome/search_related_image'
 
   resources :items do
     resources :associations do
