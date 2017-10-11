@@ -16,4 +16,9 @@ POSTGRES_PASSWORD: ''
 # Keys for Cookie validation in production build
 SECRET_KEY_BASE: ''
 
+# Keys for Google Search
+GOOGLE_API_KEY: ''
+GOOGLE_SEARCH_CX: ''
+ENABLE_IMAGES: 'false'
+
 # ** NOTE: Any changes made to this file should also be made to the Heroku server

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .association-result {
-  padding: 15px 5px;
+  padding: 20px 5px 5px 5px;
   display: flex;
   align-items: center;
 
@@ -43,4 +43,11 @@
       }
     }
   }
+}
+
+.related-image-popup {
+  height: 100px;
+  width: 200px;
+  vertical-align:middle;
+  display: none;
 }

@@ -35,14 +35,27 @@ $ ->
   associationClickEvent = (e) ->
     targetElement = $(this);
     associationName = String(targetElement.data("association-name"))
+    associationId = String(targetElement.data("association-id"))
+    associationElementId = $('#association-image-' + associationId)
+
+    # Don't load the image again if there's already one displayed
+    if ($(associationElementId).is(":visible"))
+      return;
 
     $.ajax(
+      datatype: "json",
+      contenType: "application/json; charset=utf-8",
+      type: 'POST',
       url: "/welcome/search_related_image",
       data: {
-        association_name: associationName
+        association_id: associationId
+        association_name: associationName,
       },
-      type: 'POST',
-      beforeSend: $.rails.CSRFProtection
+      beforeSend: $.rails.CSRFProtection,
+      success: (data) ->
+        if (data != undefined)
+          $(associationElementId).html( $('<img>').attr('src', data.related_image_url).attr('height', "100").attr('width', "200"));
+          $(associationElementId).show();
     )
 
   voteButtons = $('.vote-column i')

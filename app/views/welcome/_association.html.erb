@@ -1,4 +1,4 @@
-<div class="association-result" data-association-name="<%= association.name %>">
+<div class="association-result" data-association-id="<%= association.id %>" data-association-name="<%= association.name %>">
   <div class="vote-column right-align">
     <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
        class="material-icons prefix down-vote">thumb_down</i>
@@ -15,4 +15,8 @@
     <i data-item-id="<%= @item.id %>" data-association-id="<%= association.id %>"
        class="material-icons prefix up-vote">thumb_up</i>
   </div>
+</div>
+
+<!-- Populated by javascript -->
+<div id='association-image-<%= association.id %>' class="related-image-popup center-align col s12">
 </div>

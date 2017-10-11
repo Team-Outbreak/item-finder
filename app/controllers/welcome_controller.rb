@@ -14,11 +14,16 @@ class WelcomeController < ApplicationController
 
   # Requires :association_name param
   def search_related_image
+    # Only load images if they're enabled
+    return unless ENV['ENABLE_IMAGES'] == 'true'
+
     # Search Google Images for the first image result related to the association
     search_client = Google::Apis::CustomsearchV1::CustomsearchService.new
     search_client.key = ENV['GOOGLE_API_KEY']
-    # TODO:sb Commented out for now
-    # response = search_client.list_cses(params[:association_name], {cx: ENV['GOOGLE_SEARCH_CX'], num: 1, search_type: 'image', fields: 'items'})
-    # @related_image = response.items[0].link
+    response = search_client.list_cses(params[:association_name], {cx: ENV['GOOGLE_SEARCH_CX'], num: 1, search_type: 'image', fields: 'items'})
+
+    respond_to do |format|
+      format.js { render json: { :related_image_url => response.items[0].link}, content_type: 'text/json' }
+    end
   end
 end
