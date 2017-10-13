@@ -15,6 +15,9 @@
   <% elsif !params[:search].blank? && @item.nil? %>
       <div class="flow-text">
         No matching items were found.
+        <div style="font-size: 1.1rem">
+          Tip: Try a different tense (i.e. cherry → cherries)
+        </div>
         <% if params[:search].length < 3 %>
             <div>
               Try adding more letters to your search term.
