@@ -15,6 +15,8 @@ $footer-copyright-font-color: rgba(0,0,0,255);
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "responsive-table";
+@import "welcome";
+@import "associations";
 
 // Force the footer to be stuck on the bottom
 body {
@@ -24,13 +26,6 @@ body {
 }
 main {
   flex: 1 0 auto;
-}
-
-.association-result:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  font-weight:bold;
 }
 
 // Prevent the search field from highlighting when the user selects it

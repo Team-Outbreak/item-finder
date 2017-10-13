@@ -20,10 +20,12 @@
     <footer class="page-footer">
       <div class="footer-copyright">
         <div class="container">
-          Item Finder
+          <%= link_to 'Item Finder', welcome_index_path, class: 'black-text' %>
+
           <div class="right">
-            <!--TODO:sb Link this to a new page that explains the product, with examples.-->
-            <!--<a class="teal-text" href="#!">More Info</a>-->
+            <%= link_to 'Feedback', welcome_feedback_form_path, class: 'teal-text text-darken-1' %>
+            &emsp;
+            <%= link_to 'More Info', welcome_more_info_path, class: 'teal-text text-darken-1' %>
           </div>
         </div>
       </div>

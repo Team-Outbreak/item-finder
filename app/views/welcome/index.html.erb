@@ -13,41 +13,11 @@
             <%= text_field_tag :search, params[:search], autofocus: params[:search].blank? && !(request.user_agent =~ /Mobile|webOS/) ? true : false, style: "margin-bottom: 10px;" %>
         <% end %>
         <label for="search">What item are you looking for?</label>
+        <i class="material-icons prefix clear-input">close</i>
       </div>
     </form>
 
-    <div class="col m8 s12 offset-m2 center">
-      <% if !params[:search].blank? && !@item.nil? && @item.associations.any? %>
-          <div class="flow-text">
-            <i><%= @item.name.capitalize %> can be found near:</i>
-          </div>
+    <%= render partial: 'search_results' %>
 
-          <table>
-            <tbody>
-              <%= render partial: 'association', collection: @item.associations.limit(10).order("ranking desc") %>
-            </tbody>
-          </table>
-      <% elsif !params[:search].blank? && !@item.nil? && !@item.associations.any? %>
-          <div class="flow-text">
-            We're still figuring out how to help you find '<%= @item.name.capitalize %>'.
-          </div>
-      <% elsif !params[:search].blank? && @item.nil? %>
-          <div class="flow-text">
-            No matching items were found.
-            <% if params[:search].length < 3 %>
-                <div>
-                  Try adding more letters to your search term.
-                </div>
-            <% end %>
-          </div>
-      <% else %>
-          <div class="flow-text">
-            Try:
-            <span style="font-size: 1.1rem">
-              <i>Quinoa, Lentils, Tape Measures, Tangerines, Shovels, Barley, Pesto, Sauerkraut</i>
-            </span>
-          </div>
-      <% end %>
-    </div>
   </div>
 </div>
