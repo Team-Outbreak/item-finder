@@ -11,6 +11,19 @@
 
   <main>
     <body class="<%= @background_color %>">
+      <nav class="teal lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <%= link_to 'Item Finder', welcome_index_path, class: 'brand-logo' %>
+
+          <ul class="right">
+            <li><%= link_to welcome_more_info_path do %>
+              <span class="hide-on-med-and-down">More Info</span>
+              <i class="material-icons hide-on-large-only">info</i>
+            <%= end %></li>
+          </ul>
+        </div>
+      </nav>
+
       <%= yield %>
     </body>
   </main>
@@ -24,8 +37,6 @@
 
           <div class="right">
             <%= link_to 'Feedback', welcome_feedback_form_path, class: 'teal-text text-darken-1' %>
-            &emsp;
-            <%= link_to 'More Info', welcome_more_info_path, class: 'teal-text text-darken-1' %>
           </div>
         </div>
       </div>
